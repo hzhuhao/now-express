@@ -29,7 +29,7 @@ app.post("/user", (req, res) => {
 const token = '1477338873:AAGUTNjDJl3fsVN-jV0NBpHwHPsmBdCJqMU';
 
 // Create a bot that uses 'polling' to fetch new updates
-const bot = new TelegramBot(token);
+const bot = new TelegramBot(token,{polling:true});
 bot.on('message', (msg) => {
   const chatId = msg.chat.id;
   // send a message to the chat acknowledging receipt of their message
